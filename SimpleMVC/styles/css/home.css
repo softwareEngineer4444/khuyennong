@@ -1,0 +1,352 @@
+/* reset layout */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {	border-collapse: collapse; border-spacing: 0; }
+
+/* implementation */
+html{ }
+body{ font: 0.83em/150% arial, tahoma, verdana, serif, "Courier New"; color: #000;}
+a{ text-decoration: none; outline-style: none;}
+
+
+
+.inner { margin: 0 auto; width: 1100px;}
+
+ 
+h1 { font-size:48px; }
+h2 { font-size:30px; }
+h3 { font-size:26px; }
+h4 { font-size:19px; }
+h5 { }
+h6 { }
+
+i.icon { float:left; background:url(../images/sprites-icon.png) no-repeat; }
+
+.buttons { float:left; background:url(../images/sprites-bg.png) repeat-x; cursor:pointer;
+	-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+	
+button.buttons { line-height:0 !important; padding-bottom:3px !important; }
+
+body{
+    font-family: Arial, Tahoma;
+    font-size: 12px;
+}
+
+/*------------------------------------------------*/
+ 
+#main{
+    width: 1190px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/***********************Header**************************/
+#head{
+    height: 200px;
+    margin-bottom:5px;
+}
+
+/************************Menu****************************/
+#head-link{
+     height: 30px;
+     line-height: 30px;
+     margin-bottom:15px;
+     clear: both;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: #228624;
+  list-style-type: none;
+  text-align: center;
+}
+
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+/*==Dropdown Menu==*/
+.sub-menu li {
+  display: none;
+}
+
+#menu li {
+ position: relative;
+}
+
+.sub-menu {
+ display: none;
+ position: absolute;
+}
+
+#menu li:hover .sub-menu {
+ display: block;
+}
+
+.sub-menu li {
+ margin-left: 0 !important;
+}
+
+/*************************Left***************************/
+#left{
+     width: 215px;
+     min-height: 400px;
+     float:left;
+     margin-bottom: 0px;
+     margin-right: 7px;
+}
+
+.box_small_header {
+  width: 210px;
+  font-weight:  bold;
+  color: #ffffff;
+  height: 31px;
+  line-height: 31px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 10px;
+  float: left;
+  margin-top: 5px;
+}
+
+.box_small_content {
+  width: 206px;
+  float: left;
+  padding: 6px;
+  text-align: left;
+}
+
+
+
+
+
+
+/**************************Content***************************/
+
+#content1{
+     width: 690px;
+     min-height: 400px;
+     float:left;
+     margin-left: 20px;
+     margin-right: 3px;
+     margin-bottom: 5px;
+     margin-top: 5px;
+}
+
+.box_big_small {
+  width: 300px;
+  height: auto;
+  margin-bottom: 6px;
+  float: left;
+  margin-left: 3px;
+}
+
+.box_big_header_small {
+  width: 304px;
+  font-weight: bold;
+  color: #ffffff;
+  height: 31px;
+  line-height: 31px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 30px;
+  float: left;
+}
+
+.box_big_content_small {
+  width: 324px;
+  float: left;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+
+a.cont_title:link {
+  font-weight: bold;
+  color: #1f52a7;
+}
+
+.site_para {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+/****Hoi dap******/
+
+.content-header{
+  height: 30px;
+  line-height: 30px;
+  margin-bottom:15px;
+  clear: both;
+}
+
+#menu-content {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content-under {
+  width: 677px;
+  padding: 6px;
+  text-align: left;
+  margin: auto;
+}
+
+#menu-content ul {
+  background: #228624;
+  list-style-type: none;
+  text-align: center;
+}
+
+#menu-content li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+
+/**Đăng kí**/
+label.textLable {
+  width: 690px;
+  display: inline-block;
+  margin: auto;
+}
+
+.fields {
+  width: 300px;
+  margin: 5px;
+}
+
+.textBox {
+    width: 650px;
+}
+.select {
+    width: 184px;
+}
+.button {
+    width: 141px;
+    /*Thêm padding cho nút để nút to ra*/
+    padding: 5px;
+}
+form {
+    /*Margin auto dùng để canh form nằm ở chính giữa*/
+    margin: auto;
+    background-color: #D6FFFF;
+    border: 1px solid black;
+}
+
+/******Hỏi Đáp*******/
+.textBox1 {
+  width: 650px;
+  height: 200px;
+}
+
+#menu-content1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content-under {
+  width: 677px;
+  padding: 6px;
+  text-align: left;
+  margin: auto;
+}
+
+#menu-content1 ul {
+  background: #228624;
+  list-style-type: none;
+  text-align: center;
+}
+
+#menu-content1 li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+
+/*************************Right*******************************/
+
+#right{
+     width: 250px;
+     min-height: 400px;
+     float:left;
+     margin-bottom: 5px;
+}
+
+.box_small_header1 {
+  width: 210px;
+  font-weight:  bold;
+  color: #ffffff;
+  height: 31px;
+  line-height: 31px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 10px;
+  float: right;
+  margin-top: 5px;
+}
+
+.box_small_content1 {
+  width: 206px;
+  float: right;
+  padding: 6px;
+  text-align: left;
+}
+
+.content-header1{
+  height: 30px;
+  line-height: 30px;
+  margin-bottom:15px;
+  clear: both;
+  float: right;
+}
+
+
+
+/************************Footer*********************************/
+
+#footer{
+     height: auto;
+     clear: both;
+     border: 1px solid #CDCDCD;
+     background-color: #F8F8FF;
+     margin-top: 5px;
+}
+
+
