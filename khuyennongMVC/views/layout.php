@@ -24,9 +24,9 @@
                 <li class="active"><a href="index.php">Thống kê</a></li>
                 <li class="active"><a href="index.php">Báo cáo</a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form navbar-left" role="search" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Tìm kiếm">
+                  <input type="text" class="form-control" placeholder="Tìm kiếm" name="keywords">
                   <button type="submit" class="btn btn-default">Tìm kiếm</button>
                 </div>
             </form>

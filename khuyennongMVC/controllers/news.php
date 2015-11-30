@@ -8,6 +8,19 @@ function news_list() {
     $data['news'] = model('news')->all();
     //$news = model('news')->all();
     //echo "<pre>";var_dump($news);
+    if (isPostRequest()) {
+        $postData = postData();
+        // $currentUser = isLogged();
+        $keywords = $postData['keywords'];
+        if($keywords){
+            $search['results'] = search($keywords);
+            if ($search['results']) {
+                die('have search');
+                $search['template_file'] = 'news/search.php';
+                render('layout.php', $search);
+            }
+        }
+    }
     $data['template_file'] = 'news/list.php';
     render('layout.php', $data);
 }

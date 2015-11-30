@@ -17,7 +17,28 @@ function model($model) {
     
     return $models[$model];
 }
-
+function search($keyWords, $tables = null){
+    $fields = explode(" ", $keyWords,-1);
+    $data = array();
+    if($tables === null){
+        $tables = array('dichbenh', 'ktsx', 'mhsx', 'news', 'phanbon', 'question', 'tree');
+    }
+    if($fields === null){
+        return $data;
+    }
+    foreach ($tables as $table) {
+        foreach ($fields as $key) {
+            $sql = "SELECT * FROM ".strval($table)."WHERE `title` like %" .$key. "% or `content` like %".$key. "%";
+            $result = mysql_query($sql);
+            if ($result) {
+                while ($row = mysql_fetch_assoc($result)) {
+                    $data[] = $row;
+                }
+            }
+        }
+    }
+    return $data;
+}
 function isLogged() {
     if (empty($_SESSION['logged'])) {
         return false;
