@@ -15,10 +15,11 @@ function news_list() {
         if($keywords){
             $search['results'] = search($keywords);
             if ($search['results']) {
-                die('have search');
                 $search['template_file'] = 'news/search.php';
+
                 render('layout.php', $search);
             }
+            die('check');
         }
     }
     $data['template_file'] = 'news/list.php';

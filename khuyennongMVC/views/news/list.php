@@ -7,10 +7,10 @@
 </p>
 <br>
 <?php foreach ($news as $new){ ?>
-    <h3><?php echo $new["news_title"] ?></h3>
+    <h3><?php echo $new["title"] ?></h3>
 <p>
 <?php //echo $new["news_content"]
-    $substring = substr($new['news_content'], 0, 400);
+    $substring = substr($new['content'], 0, 400);
     echo $substring;
 ?>
 </p>

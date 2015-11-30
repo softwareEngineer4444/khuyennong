@@ -18,17 +18,22 @@ function model($model) {
     return $models[$model];
 }
 function search($keyWords, $tables = null){
-    $fields = explode(" ", $keyWords,-1);
+
+    $fields = explode(" ", $keyWords);
     $data = array();
     if($tables === null){
+
         $tables = array('dichbenh', 'ktsx', 'mhsx', 'news', 'phanbon', 'question', 'tree');
     }
     if($fields === null){
+        die('fields null');
         return $data;
     }
     foreach ($tables as $table) {
+        // echo "<pre>";var_dump($fields);
         foreach ($fields as $key) {
-            $sql = "SELECT * FROM ".strval($table)."WHERE `title` like %" .$key. "% or `content` like %".$key. "%";
+            // die('check');
+            $sql = "SELECT * FROM `".strval($table)."` WHERE `title` like '%" .$key. "%' or `content` like '%".$key. "%';";
             $result = mysql_query($sql);
             if ($result) {
                 while ($row = mysql_fetch_assoc($result)) {
